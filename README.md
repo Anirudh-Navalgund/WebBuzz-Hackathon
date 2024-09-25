@@ -2,7 +2,7 @@
 Welcome to **STUMP'D** a Cricket-Themed Website project! This is a dynamic, animated website built with HTML, CSS, and JavaScript to showcase cricket history, events, and team registration. The website features interactive animations, custom cursors, and a modern UI, making it both informative and visually appealing.
 
 ## Live Preview
-Cricket-Themed Website
+STUMP'D - https://anirudh-navalgund.github.io/WebBuzz-Hackathon/
 
 ## Table of Contents
 Features
