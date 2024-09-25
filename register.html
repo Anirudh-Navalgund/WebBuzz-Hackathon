@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="reg" class="registration-form" style="display: block;">
+        <h2>Player Registration</h2>
+        <form id="playerForm">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="number" id="jersey" placeholder="Jersey Number" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <input type="text" id="teamName" placeholder="Team Name" required>
+            <div id="selector">
+                Select match:
+                <section><input type="radio" name="match" value="test" onclick="displaySelection()"> Test</section>
+                <section><input type="radio" name="match" value="odi" onclick="displaySelection()"> ODI</section>
+                <section><input type="radio" name="match" value="t20" onclick="displaySelection()"> T-20</section>
+            </div>
+            <div class="error" id="errorMessage"></div>
+            <center>
+                <div id="players">
+                    <div id="column1" class="columns">
+                        <div class="getPlayers">Player 1
+                            <input type="text" id="name1" placeholder="Full Name" required>
+                            <input type="number" id="jersey1" placeholder="Jersey Number" required>
+                        </div>
+                        <div class="getPlayers">Player 2
+                            <input type="text" id="name2" placeholder="Full Name" required>
+                            <input type="number" id="jersey2" placeholder="Jersey Number" required>
+                        </div>
+                        <div class="getPlayers">Player 3
+                            <input type="text" id="name3" placeholder="Full Name" required>
+                            <input type="number" id="jersey3" placeholder="Jersey Number" required>
+                        </div>
+                        <div class="getPlayers">Player 4
+                            <input type="text" id="name4" placeholder="Full Name" required>
+                            <input type="number" id="jersey4" placeholder="Jersey Number" required>
+                        </div>
+                        <div class="getPlayers">Player 5
+                            <input type="text" id="name5" placeholder="Full Name" required>
+                            <input type="number" id="jersey5" placeholder="Jersey Number" required>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div id="column2" class="columns">
+                        <div class="getPlayers">Player 6
+                            <input type="text" id="name6" placeholder="Full Name" required>
+                            <input type="number" id="jersey6" placeholder="Jersey Number" required>
+                        </div>
+                        <div class="getPlayers">Player 7
+                            <input type="text" id="name7" placeholder="Full Name" required>
+                            <input type="number" id="jersey7" placeholder="Jersey Number" required>
+                        </div>
+                        <div class="getPlayers">Player 8
+                            <input type="text" id="name8" placeholder="Full Name" required>
+                            <input type="number" id="jersey8" placeholder="Jersey Number" required>
+                        </div>
+                        <div class="getPlayers">Player 9
+                            <input type="text" id="name9" placeholder="Full Name" required>
+                            <input type="number" id="jersey9" placeholder="Jersey Number" required>
+                        </div>
+                        <div class="getPlayers">Player 10
+                            <input type="text" id="name10" placeholder="Full Name" required>
+                            <input type="number" id="jersey10" placeholder="Jersey Number" required>
+                        </div>
+                    </div>
+                </div>
+            </center>
+            <button type="submit">Register</button>
+            <br><br>
+            <center>
+            <div id="output">
+                    <table>
+                        <tr><th colspan="2">STUMP'D</th></tr>
+                        <tr>
+                            <td>
+                                <table>
+                                    <tr height="37px"><td>Team name: </td><td id="team_name"></td></tr>
+                                    <tr height="38px"><td>Match ID: </td><td id="reciept_mid"></td></tr>
+                                    <tr height="37px"><td>Name: </td><td id="captain_name"></td></tr>
+                                    <tr height="38px"><td>Jersey: </td><td id="captain_jersey"></td></tr>
+                                    <tr height="37px"><td>Email: </td><td id="captain_email"></td></tr>
+                                    <tr height="38px"><td>Phone: </td><td id="captain_phone"></td></tr>
+                                    <tr height="37px"><td>Match: </td><td id="reciept_match"></td></tr>
+                                    <tr height="38px"><td>Registration Fees: </td><td id="reciept_fees"></td></tr>
+                                </table>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr height="60px"><td id="out1" width="200px">player_1 <br>00</td><td id="out6">player_6 <br>00</td></tr>
+                                    <tr height="60px"><td id="out2" width="200px">player_2 <br>00</td><td id="out7">player_7 <br>00</td></tr>
+                                    <tr height="60px"><td id="out3" width="100px">player_3 <br>00</td><td id="out8">player_8 <br>00</td></tr>
+                                    <tr height="60px"><td id="out4" width="100px">player_4 <br>00</td><td id="out9">player_9 <br>00</td></tr>
+                                    <tr height="60px"><td id="out5" width="100px">player_5 <br>00</td><td id="out10">player_10 <br>00</td></tr>
+                                </table>
+                            </td>
+                    </tr>
+                    <tr><td colspan="2"><center><button style="width: 200px; height: 30px; background-color: white;
+                        color: black;
+                        border-width: 1px;
+                        border-color: black;
+                        box-shadow: 0 0 10px rgba(255, 255, 255, 0.713);
+                        :hover{transform: scale(1.05);
+                            transition: 0.3s ease-in-out;}" onclick="print()">Print</button></center></td></tr>
+                    </table>
+                    <center><p style="color: red;">Note: Please show this receipt at the venue</p></center>
+            </div>
+        </form> 
+    </div>
+    
+
+    <script src="app.js"></script>
+
+</body>
+</html>

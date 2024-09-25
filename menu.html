@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection</title>
+</head>
+<style>
+  html{
+    overscroll-behavior: none;
+    overflow-x: hidden;
+    background: url(black-background.jpg);
+    color: white;
+    font-family: "Overpass", sans-serif;
+  }
+    #body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5%;
+        margin-top: 05%;
+        overflow-x: hidden;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: large;
+        
+    }
+    .card {
+    /* Add shadows to create the "card" effect */
+      width: 20%;
+      box-shadow: 0px 4px 8px 0 rgba(255, 255, 255, 0.753);
+      border-width: 2px;
+      transition: 0.3s;
+      border-radius: 5px;
+    }
+
+/* On mouse-over, add a deeper shadow */
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }   
+
+/* Add some padding inside the card container */
+  .container {
+    padding: 0px 16px;
+    text-align: center;
+  }
+
+.reg_btn{
+  background-color: white;
+  color: black;
+  border-width: 1px;
+  border-color: black;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.713);
+  width: 230px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  font-size: large;
+  font-weight: bold;
+}
+.reg_btn:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+}
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+  border-radius: 5px 5px 0 0;
+}
+</style>
+<body>
+  <div class="cursor">
+    <div class="cursor__ball"></div>
+  </div>
+    <div id="body">
+        <div class="card">
+            <img src="test.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4><b>Test Match</b></h4> 
+              <p id="venue1">Wankhede, Mumbai</p>
+              <p id="date1">01-10-2024</p>
+              <p id="time1">10:00 AM</p>
+              <p id="fee1">₹5000.00</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="test.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4><b>ODI Match</b></h4>
+              <p id="venue2">Chinnaswamy, Bangalore</p>
+              <p id="date2">06-10-2024</p>
+              <p id="time2">12:00 PM</p>
+              <p id="fee2">₹2000.00</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="test.jpg" alt="Avatar" style="width:100%">
+            <div class="container">
+              <h4><b>T-20 Match</b></h4>
+              <p id="venue3">Ahmedabad</p>
+              <p id="date3">08-10-2024</p>
+              <p id="time3">06:00 PM</p>
+              <p id="fee3">₹1000.00</p>
+            </div>
+          </div>
+        </div>
+        <br><br>
+        <center><a href="register.html"><button class="reg_btn">Register</button></a></center>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script>
+  const $cursorBall = document.querySelector('.cursor__ball');
+  const $hoverables = document.querySelectorAll('.hoverable');
+
+  // Listeners
+  document.body.addEventListener('mousemove', onMouseMove);
+  for (let i = 0; i < $hoverables.length; i++) {
+    $hoverables[i].addEventListener('mouseenter', onMouseHover);
+    $hoverables[i].addEventListener('mouseleave', onMouseHoverOut);
+  }
+
+  // Move the cursor
+  function onMouseMove(e) {
+    TweenMax.to($cursorBall, .4, {
+      x: e.pageX,
+      y: e.pageY
+    });
+  }
+
+  // Hover an element
+  function onMouseHover() {
+    TweenMax.to($cursorBall, .3, {
+      scale: 2
+    });
+  }
+
+  function onMouseHoverOut() {
+    TweenMax.to($cursorBall, .3, {
+      scale: 1
+    });
+  }
+</script>
+</html>

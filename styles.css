@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overscroll-behavior: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html, body {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+}
+
+.cursor__ball {
+  position: absolute;
+  background: #cbcbcb;
+  border-radius: 50%;
+  width: 25px; /* Size of the ball */
+  height: 25px; /* Size of the ball */
+}
+
+
+h1 {
+  font-size: 80px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  width: 50%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0.5em;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  z-index: 1000;
+}
+
+.register_button {
+  position: fixed;
+  top: 20;
+  right: 0;
+  margin: 1.5em 1.5em;
+  width: 230px;
+  height: 40px;
+  border-radius: 10px;
+  z-index: 1000;
+  background-color: white;
+  color: black;
+  border-width: 1px;
+  border-color: black;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.713);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Overpass", sans-serif;
+  font-weight: 900;
+  padding: 0;
+}
+
+.register_button:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+}
+
+.logo img {
+  border-radius: 50px;
+}
+
+.header {
+  opacity: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 100%;
+  z-index: 2;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.letters {
+  flex: 1;
+  display: flex;
+  text-transform: uppercase;
+  font-family: "Overpass", sans-serif;
+  font-weight: 900;
+}
+
+.letters > div {
+  flex: 1;
+  font-size: 18vw;
+  color: black;
+  text-align: center;
+  font-family: "Overpass", sans-serif;
+  font-weight: 900;
+}
+
+.website-content {
+  position: relative;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.img-holder {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  clip-path: polygon(37.5% 20%, 60.5% 20%, 60.5% 80%, 37.5% 80%);
+  transform: rotate(30deg);
+  transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+}
+
+.img-holder img {
+  opacity: 1;
+  position: relative;
+  transform: scale(2);
+}
+
+
+.content-holder {
+  position: relative;
+  top: 150vw;
+  width: 100%;
+  background: url(black-background.jpg);
+  color: white;
+  padding: 0;
+  height: 400vh;
+  transition: background-color 0.5s ease; /* Smooth transition for background color */
+}
+
+
+.content-holder p {
+  width: 85%;
+  font-weight: 400;
+}
+
+.content-holder h1 {
+  font-weight: bold;
+}
+
+.row {
+  margin: 2em 1em;
+}
+
+.gallery h1 {
+	font-size:clamp(1em, 3vw, 5em);
+}
+
+.gallery p {
+	font-size:clamp(1em, 2vw, 3em);
+	line-height:1.4;
+}
+
+
+.gallery {
+  display:flex;	
+}
+
+.left {
+	width:50%;
+}
+
+.right {
+	height:100vh;
+	width:50%;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+.desktopContent {
+	margin:auto;
+	width:80%;
+}
+
+.desktopContentSection {
+	min-height:100vh;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+
+.desktopPhotos {
+	width:40vw;
+	height:40vw;
+	border-radius:50px;
+	position:relative;
+	overflow:hidden;
+	box-shadow: 0px 0px 20px rgba(252, 252, 252, 0.724);
+}
+
+.desktopPhoto {
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+
+.red {
+	background: crimson;
+}
+
+.green {
+	background:MediumSeaGreen;
+}
+
+.blue {
+	background:dodgerblue;
+}
+
+.pink{
+	background:deepPink;
+}
+
+.footer {
+  height: 102vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
