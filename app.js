@@ -130,6 +130,7 @@ form.addEventListener('submit', function(event) {
     document.getElementById("captain_email").innerHTML = email;
     document.getElementById("captain_phone").innerHTML = phone;
     document.getElementById("team_name").innerHTML = teamName;
+    document.getElementById("receipt_mid").innerHTML = (Math.random().toFixed(4))*1000
     
 
     document.getElementById("out1").innerHTML = jersies[0]+"\n"+players[0]
